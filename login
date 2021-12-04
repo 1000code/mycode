@@ -56,7 +56,7 @@
             return redirect()->route('login')->with('error', "ຊື່ຜູ້ໃຊ້ ຫຼື ລະຫັດຜ່ານບໍ່ຖືກຕ້ອງ");
         }
     }
-}
+    
 
 
 
