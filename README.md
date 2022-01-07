@@ -11,3 +11,7 @@ npm install resolve-url-loader@^4.0.0 --save-dev
 
 npm install express body-parser mongoose cors morgan bcryptjs express-jwt jsonwebtoken nodemon dotenv
 
+
+=================================
+client 
+npm install axios react-router-dom redux react-redux redux-devtools-extension moment react-moment
