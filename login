@@ -42,16 +42,12 @@
             'password.required' => 'ກະລຸນາປ້ອນລະຫັດຜ່ານ',
         ]);
 
-        if (auth()->attempt(array('email' => $request['email'], 'password' => $request['password']))) {
-          if (auth()->user()->status === 'open) {
-              if (auth()->user()->isAdmin == 'admin') {
-                  return redirect()->route('admin');
-              } else {
-                 // return redirect()->route('staff');
-              }
-           }else{
-              return redirect()->route('login')->with('error', "ບັນຊີຂອງທ່ານຖືກລະງັບການໃຊ້ງານ");
-           }
+       if (auth()->attempt(array('phone' => $request['phone'], 'password' => $request['password']))) {
+            if (auth()->user()->role == 'admin') {
+                return redirect()->route('admin');
+            } else {
+                // return redirect()->route('staff');
+            }
         } else {
             return redirect()->route('login')->with('error', "ຊື່ຜູ້ໃຊ້ ຫຼື ລະຫັດຜ່ານບໍ່ຖືກຕ້ອງ");
         }
