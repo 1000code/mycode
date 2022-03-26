@@ -43,8 +43,8 @@
         ]);
 
         if (auth()->attempt(array('email' => $request['email'], 'password' => $request['password']))) {
-          if (auth::user()->status === 'open) {
-              if (auth::user()->isAdmin == 'admin') {
+          if (auth()->user()->status === 'open) {
+              if (auth()->user()->isAdmin == 'admin') {
                   return redirect()->route('admin');
               } else {
                  // return redirect()->route('staff');
